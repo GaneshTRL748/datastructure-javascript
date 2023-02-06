@@ -2,15 +2,14 @@
 let arr=['ganesh',1,2,3];
 let arr1=new Array('suba',4,5,6);
 let arr5=arr.concat(arr1);
-//console.log(x);
 //2.copyWithin->copy the at position and shift
 let  arr3=Array('ruby','Aimee','maeve');
 arr3.copyWithin(1,0);
 console.log(arr3);
 //3.entries->return the array iterator with key and value pair
 let arr4=['denver','tokoyo','professor'];
-var arr6=arr4.entries();
-for(var arr7 of arr6)
+let arr6=arr4.entries();
+for(let arr7 of arr6)
 {
     console.log(arr7);
 }
@@ -53,8 +52,7 @@ console.log(arr17.includes('ravi'));
 let arr18=['ram','janani','kumaran','ram'];
 console.log(arr18.indexOf('ram'));
 //13.isarray check the given object is array or not
-let name="ganesh";
-console.log(Array.isArray(name));
+console.log(Array.isArray(arr18));
 //14.join -> return the array as single string and joins the string in it
 let arr19=['ganesh','is','smart','boy'];
 let name1=arr19.join('');
