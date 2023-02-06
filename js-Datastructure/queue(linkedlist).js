@@ -1,5 +1,5 @@
 //queue using linked list
-class node{
+class Node{
     data;
     next;
     constructor(value)
@@ -7,19 +7,19 @@ class node{
         this.data=value;
     }
 }
-class queue{
+class Queue{
     front ;
     rear;
     enqueue(value)
     {
             if(this.rear==null)
             {
-                this.rear=new node(value);
+                this.rear=new Node(value);
                 this.front=this.rear;
                 this.rear.next=null;
             }
             else{
-                 let temp=new node(value);
+                 let temp=new Node(value);
                  this.rear.next=temp;
                  this.rear=temp;
             }
@@ -57,7 +57,7 @@ class queue{
     }
     }
 }
-var list= new queue();
+let list= new Queue();
 list.enqueue(1);
 list.enqueue(2);
 list.enqueue(3);
