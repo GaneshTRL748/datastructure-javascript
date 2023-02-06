@@ -1,4 +1,4 @@
-class node{
+class Node{
     data;
     next;
     constructor(data)
@@ -6,7 +6,7 @@ class node{
         this.data=data;
     }
 }
-class createList{
+class CreateList{
       head=null;
       count=0;
     insertfirst(value)
@@ -14,12 +14,12 @@ class createList{
         let temp;
         if(this.head==null)
         {
-            this.head=new node(value);
+            this.head=new Node(value);
             this.head.next=null;
             this.count++;
         }
         else{
-             temp=new node(value);
+             temp=new Node(value);
              temp.next=this.head;
              this.head=temp;
              this.count++;
@@ -29,7 +29,7 @@ class createList{
     {
        if(this.count==0)
        {
-             this.head=new node(value);
+             this.head=new Node(value);
              this.head.next=null;
              this.count++;
        }
@@ -41,7 +41,7 @@ class createList{
                  temp1=temp1.next;
                  temp2++;
             }
-           temp1.next=new node(value);
+           temp1.next=new Node(value);
            this.next=null;
            this.count++;
       }
@@ -56,12 +56,12 @@ class createList{
             temp2++;
           }
           let nextnode1=temp1.next;
-          temp1.next=new node(value);
+          temp1.next=new Node(value);
           temp1.next.next=nextnode1;
           this.count++;
     }
     printlists(){
-        var printtemp = this.head;
+        let printtemp = this.head;
         if(printtemp == null){
             console.log("Is empty!")
         }else{
@@ -114,7 +114,7 @@ class createList{
         }
     }
 }
-var list=new createList();
+let list=new CreateList();
 list.insertlast(1);
 list.insertlast(2);
 list.insertfirst(0);
@@ -125,7 +125,6 @@ list.insertfirst(0.1);
 list.insertatposition(1.5,4);
 list.insertlast(5);
 list.deletefirst();
-console.log("head:"+list.head.data);
 list.deletelast();
 list.deleteatpos(3);
 list.insertlast(6);
