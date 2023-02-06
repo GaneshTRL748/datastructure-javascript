@@ -1,5 +1,5 @@
 //stack using linked list
-class node{
+class Node{
     data;
     previous;
     constructor(value)
@@ -7,17 +7,17 @@ class node{
         this.data=value;
     }
 }
-class stack{
+class Stack{
     top;
     push(value)
     {
            if(this.top==null)
            {
-              this.top=new node(value);
+              this.top=new Node(value);
               this.top.previous=null;
            }
            else{
-              let temp=new node(value);
+              let temp=new Node(value);
               temp.previous=this.top;
               this.top=temp;
            }
@@ -50,7 +50,7 @@ class stack{
         }
     }
 }
-list = new stack();
+let list = new Stack();
 list.push(1);
 list.push(2);
 list.push(3);
